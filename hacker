@@ -1,0 +1,30 @@
+import time
+import sys
+
+def print_slow(text, delay=0.03):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def hacker_animation():
+    print_slow("Initializing hacker interface...")
+    time.sleep(1)
+
+    print_slow("Establishing connection to mainframe...", delay=0.05)
+    time.sleep(1)
+
+    print_slow("Injecting malicious code...", delay=0.03)
+    time.sleep(1)
+
+    print_slow("Bypassing firewalls...", delay=0.05)
+    time.sleep(1)
+
+    print_slow("Access granted! Welcome to the hacker world.")
+
+if __name__ == "__main__":
+    # Check if the script is running in a terminal
+    if sys.stdout.isatty():
+        hacker_animation()
+    else:
+        print("This script is intended to be run in a terminal.")
